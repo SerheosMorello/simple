@@ -1,0 +1,13 @@
+url_ok = 'http://192.168.0.1'
+url_google = 'https://google.com'
+url_bad = 'https://192.168.0.1'
+url_fntmain = "http://sapp-dev-fe-01.ell.fnt.de/CMDHTML/prototype/next"
+url_base = "http://sapp-dev-fe-01.ell.fnt.de/CMDHTML/prototype/develop/577/"
+url_loading ="loading"
+url_login ="command/login"
+url_mandant ="command/mandant"
+url_command = "command"
+username = "command"
+password = "command"
+chromedriver = "C:\\chromedriver.exe"
+geckodriver ="C:\\geckodriver.exe"
