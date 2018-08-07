@@ -7,7 +7,7 @@ import data as d
 import time
 
 def fnt_login(iteration = 1):
-    for driver in [drivers.chrome(),drivers.firefox()]:
+    for driver in drivers.list:
         driver.implicitly_wait(20)
         wait = WebDriverWait(driver, 20)
         try:
