@@ -5,9 +5,8 @@ from selenium.common.exceptions import WebDriverException
 import drivers
 import data as d
 import time
-
 def fnt_login(iteration = 1):
-    for driver in drivers.list:
+    for driver in drivers.remoteList:
         driver.implicitly_wait(20)
         wait = WebDriverWait(driver, 20)
         try:
@@ -20,12 +19,15 @@ def fnt_login(iteration = 1):
                 wait.until(EC.url_to_be(d.url_base + d.url_mandant))
                 driver.find_element_by_id("ok").click()
                 wait.until(EC.url_to_be(d.url_base + d.url_command))
-                driver.set_page_load_timeout(20)
+                driver.set_page_load_timeout(10)
                 time.sleep(2)
                 driver.find_element_by_xpath("//*[@id='logout']/span").click()
         except WebDriverException as e:
             print("Execution error {}".format(e))
             return False
         finally:
-            driver.close()
+            #for loginHARD
+            #driver.quit()
+            #driver.close()
+            pass
     return True

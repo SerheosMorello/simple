@@ -19,9 +19,8 @@ class TestSuite(unittest.TestCase):
     #@unittest.skip(" test_FNT_login to long")
     def test_FNT_login(self):
         self.assertTrue(web.fnt_login())
-    #@unittest.skip(" test_FNT_loginHARD, Reason: to long")
+    @unittest.skip(" test_FNT_loginHARD, Reason: to long")
     def test_FNT_loginHARD(self):
-        self.assertTrue(web.fnt_login(5))
-
+        self.assertTrue(web.fnt_login(2))
 if __name__ == '__main__':
     unittest.main()
